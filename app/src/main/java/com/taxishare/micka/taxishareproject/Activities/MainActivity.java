@@ -1,4 +1,4 @@
-package com.taxishare.micka.taxishareproject;
+package com.taxishare.micka.taxishareproject.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +9,12 @@ import android.widget.EditText;
 
 import com.taxishare.micka.taxishareproject.Entities.User;
 import com.taxishare.micka.taxishareproject.LocalStore.UserLocalStore;
+import com.taxishare.micka.taxishareproject.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnLogout;
-    EditText etName,etUsername,etAge;
+    EditText etName,etUsername,etAge,etId;
     UserLocalStore userLocalStore;
 
     @Override
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etName = (EditText)findViewById(R.id.etName);
         etUsername = (EditText)findViewById(R.id.etUsername);
         etAge = (EditText)findViewById(R.id.etAge);
+        etId = (EditText)findViewById(R.id.etId);
         btnLogout = (Button) findViewById(R.id.btnLogout);
 
         btnLogout.setOnClickListener(this);
@@ -35,9 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
 
-        if (authenticate()==true){
+        //if (authenticate()==true){
             displayUserDetails();
-        }
+       // }else{
+           // startActivity(new Intent(this,LoginActivity.class));
+       // }
     }
 
     private boolean authenticate(){
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         User user = userLocalStore.getLogedInUser();
         etUsername.setText(user.username);
         etName.setText(user.name);
+        etId.setText(user.id);
         etAge.setText(user.age+"");
     }
 

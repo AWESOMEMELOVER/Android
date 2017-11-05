@@ -6,7 +6,8 @@ package com.taxishare.micka.taxishareproject.Entities;
 
 public class User {
 
-   public String name, username,password;
+
+   public String name, username,password,id;
    public int age;
 
     public User(String name , String username , String password , int age){
@@ -20,6 +21,13 @@ public class User {
         this.password=password;
         this.age=-1;
         this.name="";
+    }
+    public User(String name , String username , String password , int age,String id){
+        this.age=age;
+        this.name=name;
+        this.password=password;
+        this.username = username;
+        this.id = id;
     }
 
 }

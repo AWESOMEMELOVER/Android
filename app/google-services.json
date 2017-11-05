@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "776793373490-mva57jeq0noohmdhv9htbj6s8hkep42t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taxishare.micka.taxishareproject",
+            "certificate_hash": "b5e135207e206366a1f8c6f33e030fab6816a2ac"
+          }
+        },
+        {
           "client_id": "776793373490-kkude3pejfud9g8ep67hc0fffjir9d7c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

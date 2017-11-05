@@ -1,4 +1,4 @@
-package com.taxishare.micka.taxishareproject;
+package com.taxishare.micka.taxishareproject.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.taxishare.micka.taxishareproject.Entities.User;
 import com.taxishare.micka.taxishareproject.LocalStore.UserLocalStore;
+import com.taxishare.micka.taxishareproject.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
